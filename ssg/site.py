@@ -34,17 +34,17 @@ class Site:
 
         self.dest.mkdir(parents=True, exist_ok=True)
 
-        for i in self.source.rglob("*"):
+        for path in self.source.rglob("*"):
             # path_dir = os.path.dirname(self.source)
             # rel_path = i.relative_to(path_dir)
             # rel_path = i.relative_to(self.source)
             # print(f'dhuhkf source: {self.source}, path_dir: {path_dir}, rel_path: {rel_path}, i: {i}')
             # exit()
 
-            if i.is_dir():
+            if path.is_dir():
                 # print('in loop: ', i, rel_path)
                 # self.create_dir(rel_path)
-                self.create_dir(i)
+                self.create_dir(path)
 
 # site = Site('/pathsource/a/c', '/pathsource/a')
 # site = Site("c:/Users/smid/Downloads", "c:/Users/smid/focus")
