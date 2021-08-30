@@ -11,11 +11,6 @@ def main(source = "content", dest = "dist"):
 
     config = {"source": source, "dest": dest}
 
-    site = Site(**config)
-    site.build()
+    site = Site(**config).build()
 
-# typer.run(main)
-
-if __name__ == "__main__":
-    typer.run(main)
-    # print(main.__name__)
+typer.run(main)
