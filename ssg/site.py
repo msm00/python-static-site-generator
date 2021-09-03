@@ -34,7 +34,7 @@ class Site:
             parser.parse(path, self.source, self.dest)
         else:
             # print('NotImplemented')
-            self.error("No parser for the {0} extension, file skipped!".format(path.suffix))
+            self.error("No parser for the {} extension, file skipped!".format(path.suffix))
 
     @staticmethod
     def error(message):
